@@ -36,6 +36,12 @@ const ETIQUETAS = {
   // --- Etapa 3: las etiquetas que más usan atributos ---
   enlace: "a",
   imagen: "img",
+
+  // --- Etapa 4: listas y elementos en línea ---
+  lista: "ul",
+  "lista-ord": "ol",
+  elemento: "li",
+  tramo: "span",
 };
 
 module.exports = { ETIQUETAS };

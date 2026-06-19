@@ -52,14 +52,26 @@ Etiquetas nuevas de esta etapa (las que más usan estos atributos):
 | `enlace`  | `a`   | Hipervínculo            |
 | `imagen`  | `img` | Imagen incrustada       |
 
-## Etapa 4 — Listas y más elementos en línea (pendiente)
+## Etapa 4 — Listas y elementos en línea ✅
 
-| HTES          | HTML5  |
-|---------------|--------|
-| `lista`       | `ul`   |
-| `lista-ord`   | `ol`   |
-| `elemento`    | `li`   |
-| `tramo`       | `span` |
+| HTES          | HTML5  | Descripción                              |
+|---------------|--------|--------------------------------------------|
+| `lista`       | `ul`   | Lista desordenada con viñetas               |
+| `lista-ord`   | `ol`   | Lista ordenada, numerada                    |
+| `elemento`    | `li`   | Elemento dentro de una lista                |
+| `tramo`       | `span` | Contenedor genérico en línea sin semántica  |
+
+## Etapa 5 — Formularios (pendiente)
+
+| HTES           | HTML5      |
+|----------------|------------|
+| `formulario`   | `form`     |
+| `entrada`      | `input`    |
+| `boton`        | `button`   |
+| `etiqueta`     | `label`    |
+| `seleccionar`  | `select`   |
+| `opcion`       | `option`   |
+| `area-texto`   | `textarea` |
 
 ## Regla constitucional
 

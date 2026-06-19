@@ -37,10 +37,14 @@ si tradujéramos las etiquetas primero, `ruta=` dentro de `<enlace>` ya
 estaría dentro de una etiqueta `<a>`, pero el atributo seguiría sin
 traducir si no hacemos ambos pasos.
 
-## ⬜ Etapa 4 — Listas, enlaces e imágenes
-6 etiquetas: `enlace`, `imagen`, `lista`, `lista-ord`, `elemento`, `tramo`.
-Usa los atributos de la Etapa 3 en la práctica.
-**Meta:** un blog o portafolio simple, completo y navegable.
+## ✅ Etapa 4 — Listas y elementos en línea
+4 etiquetas: `lista`, `lista-ord`, `elemento`, `tramo`. No introduce
+conceptos nuevos de motor — solo demuestra que el diccionario crece sin
+tocar el transpilador. Probamos anidación de tres niveles
+(`lista > elemento > enlace`) y `tramo` con atributo `clase` combinando
+todo lo aprendido en la Etapa 3.
+**Meta lograda:** una navegación con enlaces reales en lista, texto
+resaltado en línea, y una lista ordenada.
 
 ## ⬜ Etapa 5 — Formularios
 8 etiquetas: `formulario`, `entrada`, `boton`, `etiqueta`, `seleccionar`,

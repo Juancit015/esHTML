@@ -5,6 +5,7 @@
   <style>
     body { font-family: sans-serif; background: #111; color: #eee; margin: 0; }
     encabezado, pie-pagina { padding: 20px; background: #222; }
+    .resaltado { background: #ffd54f; color: #111; padding: 2px 6px; border-radius: 4px; }
   </style>
 </head>
 <body>
@@ -12,7 +13,11 @@
   <header>
     <h1>Mi sitio en HTES</h1>
     <nav>
-      <p>Inicio | Acerca de | Contacto</p>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#acerca">Acerca de</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
     </nav>
   </header>
 
@@ -32,6 +37,18 @@
           para aprender mas.
         </p>
         <img src="https://via.placeholder.com/300x150" alt="Imagen de prueba">
+      </div>
+
+      <div>
+        <h3>Probando listas y tramo</h3>
+        <p>
+          Esta palabra esta <span class="resaltado">resaltada</span> con un tramo.
+        </p>
+        <ol>
+          <li>Primero escribimos el diccionario</li>
+          <li>Luego el transpilador minimo</li>
+          <li>Despues probamos con archivos reales</li>
+        </ol>
       </div>
     </section>
   </main>
