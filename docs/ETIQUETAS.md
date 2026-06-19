@@ -61,17 +61,40 @@ Etiquetas nuevas de esta etapa (las que más usan estos atributos):
 | `elemento`    | `li`   | Elemento dentro de una lista                |
 | `fragmento`   | `span` | Contenedor genérico en línea sin semántica  |
 
-## Etapa 5 — Formularios (pendiente)
+## Etapa 5 — Formularios ✅
 
-| HTES           | HTML5      |
-|----------------|------------|
-| `formulario`   | `form`     |
-| `entrada`      | `input`    |
-| `boton`        | `button`   |
-| `etiqueta`     | `label`    |
-| `seleccionar`  | `select`   |
-| `opcion`       | `option`   |
-| `area-texto`   | `textarea` |
+| HTES           | HTML5      | Descripción                                |
+|----------------|------------|----------------------------------------------|
+| `formulario`   | `form`     | Formulario para captura y envío de datos     |
+| `entrada`      | `input`    | Campo de entrada: texto, email, número...    |
+| `boton`        | `button`   | Botón interactivo                            |
+| `etiqueta`     | `label`    | Etiqueta asociada a un campo                 |
+| `seleccionar`  | `select`   | Lista desplegable de opciones                |
+| `opcion`       | `option`   | Opción dentro de un select                   |
+| `area-texto`   | `textarea` | Área de texto multilínea                     |
+
+Atributos con valor:
+
+| Atributo HTES | Atributo HTML5 | Descripción                          |
+|---------------|----------------|----------------------------------------|
+| `tipo`        | `type`         | Tipo de entrada: text, email, submit...|
+| `nombre`      | `name`         | Nombre del campo al enviar el formulario|
+| `valor`       | `value`        | Valor de una opción o campo            |
+| `marcador`    | `placeholder`  | Texto de ejemplo dentro del campo      |
+| `para`        | `for`          | Conecta una etiqueta con su campo (id) |
+
+Atributos booleanos (sin `=valor`, solo la palabra sola):
+
+| Atributo HTES   | Atributo HTML5 | Descripción                      |
+|-----------------|----------------|------------------------------------|
+| `requerido`     | `required`     | El campo es obligatorio            |
+| `seleccionado`  | `checked`      | Checkbox/radio marcado por defecto |
+| `deshabilitado` | `disabled`     | El campo no se puede editar        |
+
+## Etapa 6 — Documentación y publicación (pendiente)
+
+Sin etiquetas nuevas. Esta etapa es: README completo, spec pública, y
+preparar el repositorio para que otros desarrolladores puedan contribuir.
 
 ## Regla constitucional
 

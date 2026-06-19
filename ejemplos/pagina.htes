@@ -6,6 +6,10 @@
     body { font-family: sans-serif; background: #111; color: #eee; margin: 0; }
     encabezado, pie-pagina { padding: 20px; background: #222; }
     .resaltado { background: #ffd54f; color: #111; padding: 2px 6px; border-radius: 4px; }
+    form { display: flex; flex-direction: column; gap: 4px; max-width: 320px; }
+    form label { font-size: 14px; margin-top: 8px; }
+    form input, form select, form textarea { padding: 8px; border-radius: 4px; border: 1px solid #444; background: #1a1a1a; color: #eee; }
+    form button { margin-top: 12px; padding: 10px; background: #ffd54f; color: #111; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
   </estilo>
 </cabeza>
 <cuerpo>
@@ -49,6 +53,28 @@
           <elemento>Luego el transpilador minimo</elemento>
           <elemento>Despues probamos con archivos reales</elemento>
         </lista-ord>
+      </contenedor>
+      <contenedor>
+        <subtitulo3>Probando formularios</subtitulo3>
+        <formulario>
+          <etiqueta para="nombre-completo">Nombre</etiqueta>
+          <entrada tipo="text" id="nombre-completo" nombre="nombre" marcador="Tu nombre" requerido>
+
+          <etiqueta para="correo-usuario">Correo</etiqueta>
+          <entrada tipo="email" id="correo-usuario" nombre="correo" marcador="tu@correo.com" requerido>
+
+          <etiqueta para="motivo">Motivo</etiqueta>
+          <seleccionar id="motivo" nombre="motivo">
+            <opcion valor="consulta">Consulta</opcion>
+            <opcion valor="soporte">Soporte</opcion>
+            <opcion valor="otro">Otro</opcion>
+          </seleccionar>
+
+          <etiqueta para="mensaje-usuario">Mensaje</etiqueta>
+          <area-texto id="mensaje-usuario" nombre="mensaje" marcador="Escribe tu mensaje"></area-texto>
+
+          <boton tipo="submit">Enviar</boton>
+        </formulario>
       </contenedor>
     </seccion>
   </principal>

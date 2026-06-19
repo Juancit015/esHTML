@@ -42,6 +42,15 @@ const ETIQUETAS = {
   "lista-ord": "ol",
   elemento: "li",
   fragmento: "span",
+
+  // --- Etapa 5: formularios ---
+  formulario: "form",
+  entrada: "input",
+  boton: "button",
+  etiqueta: "label",
+  seleccionar: "select",
+  opcion: "option",
+  "area-texto": "textarea",
 };
 
 module.exports = { ETIQUETAS };
@@ -63,6 +72,26 @@ const ATRIBUTOS = {
   fuente: "src",
   alt: "alt",
   id: "id",
+
+  // --- Etapa 5: atributos de formularios ---
+  tipo: "type",
+  nombre: "name",
+  valor: "value",
+  marcador: "placeholder",
+  para: "for",
 };
 
 module.exports.ATRIBUTOS = ATRIBUTOS;
+
+// ============================================================
+// Atributos booleanos (no llevan "=valor", solo la palabra sola)
+// ============================================================
+// Ejemplo: <entrada requerido>  en vez de  <entrada requerido="si">
+
+const ATRIBUTOS_BOOLEANOS = {
+  requerido: "required",
+  seleccionado: "checked",
+  deshabilitado: "disabled",
+};
+
+module.exports.ATRIBUTOS_BOOLEANOS = ATRIBUTOS_BOOLEANOS;

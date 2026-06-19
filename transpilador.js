@@ -14,18 +14,25 @@
 
 const fs = require("fs");
 const path = require("path");
-const { ETIQUETAS, ATRIBUTOS } = require("./src/diccionario");
+const { ETIQUETAS, ATRIBUTOS, ATRIBUTOS_BOOLEANOS } = require("./src/diccionario");
 
 function transpilar(codigoHtes) {
   let resultado = codigoHtes;
 
-  // Paso 1: traducir atributos (clase=, ruta=, fuente=...)
+  // Paso 1: traducir atributos con valor (clase=, ruta=, fuente=...)
   // Importante: esto va ANTES de traducir etiquetas, porque buscamos
   // el atributo seguido de "=", sin importar en qué etiqueta esté.
   for (const [es, en] of Object.entries(ATRIBUTOS)) {
     if (es === en) continue; // no hace falta tocar id="..." si ya es igual
     const patronAtributo = new RegExp(`\\b${es}=`, "g");
     resultado = resultado.replace(patronAtributo, `${en}=`);
+  }
+
+  // Paso 1.5: traducir atributos booleanos (sin "=valor")
+  // Ejemplo: requerido  ->  required
+  for (const [es, en] of Object.entries(ATRIBUTOS_BOOLEANOS)) {
+    const patronBooleano = new RegExp(`\\b${es}\\b(?!=)`, "g");
+    resultado = resultado.replace(patronBooleano, en);
   }
 
   // Paso 2: traducir etiquetas (igual que en la Etapa 1 y 2)

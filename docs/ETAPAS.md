@@ -46,11 +46,21 @@ todo lo aprendido en la Etapa 3.
 **Meta lograda:** una navegación con enlaces reales en lista, texto
 resaltado en línea, y una lista ordenada.
 
-## ⬜ Etapa 5 — Formularios
-8 etiquetas: `formulario`, `entrada`, `boton`, `etiqueta`, `seleccionar`,
-`opcion`, `area-texto`, `tabla`.
-La parte más compleja: muchos atributos por etiqueta.
-**Meta:** un formulario de contacto funcional.
+## ✅ Etapa 5 — Formularios
+7 etiquetas: `formulario`, `entrada`, `boton`, `etiqueta`, `seleccionar`,
+`opcion`, `area-texto`. 5 atributos nuevos con valor: `tipo`, `nombre`,
+`valor`, `marcador`, `para`. Y un concepto nuevo: **atributos booleanos**
+(`requerido`, `seleccionado`, `deshabilitado`) que no llevan `=valor`,
+solo la palabra sola.
+**Meta lograda:** un formulario de contacto funcional con validación
+nativa del navegador (`required`).
+
+🐛 **Bug encontrado y corregido en esta etapa:** la primera versión
+tradujo todos los atributos `nombre=valor` pero dejó `requerido` sin
+traducir, porque ese atributo no lleva `=`. Se agregó un diccionario
+separado, `ATRIBUTOS_BOOLEANOS`, y un tercer paso en el transpilador
+para cubrir ese caso. Buen recordatorio de por qué probamos cada etapa
+antes de hacer commit.
 
 ## ⬜ Etapa 6 — Documentación y publicación
 README completo, spec pública de cada etiqueta, repositorio listo para
