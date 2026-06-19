@@ -9,10 +9,18 @@ a medias.
 Sin atributos. Reemplazo simple de texto.
 **Meta lograda:** transpilar una página mínima válida.
 
-## ⬜ Etapa 2 — Estructura visual
+## ✅ Etapa 2 — Estructura visual
 8 etiquetas: `encabezado`, `navegacion`, `principal`, `seccion`, `pie-pagina`,
-`division`, `parrafo`, `t1`-`t6`.
-**Meta:** una página con secciones visibles y texto real.
+`division`, `parrafo`, `t1`-`t6` (en realidad 13 etiquetas contando cada
+nivel de título por separado).
+**Meta lograda:** una página con secciones visibles, texto real y anidación
+de etiquetas funcionando correctamente.
+
+⚠️ **Nota técnica descubierta en esta etapa:** el transpilador reemplaza
+texto sin distinguir si está dentro de una etiqueta real o dentro de un
+bloque de `<estilo>`/CSS. Por ahora no causa problemas porque nuestras
+etiquetas no coinciden con nombres comunes de clases CSS, pero es algo a
+resolver antes de la Etapa 5.
 
 ## ⬜ Etapa 3 — Atributos básicos
 El salto técnico importante. El transpilador deja de ser "buscar y

@@ -17,18 +17,31 @@ Las etiquetas que existen en todo documento HTML, sin atributos todavía.
 | `estilo`     | `style`  | Estilos CSS incrustados                    |
 | `guion`      | `script` | Código JavaScript incrustado o enlazado    |
 
-## Etapa 2 — Estructura visual (pendiente)
+## Etapa 2 — Estructura visual ✅
 
-| HTES           | HTML5    |
-|----------------|----------|
-| `encabezado`   | `header` |
-| `navegacion`   | `nav`    |
-| `principal`    | `main`   |
-| `seccion`      | `section`|
-| `pie-pagina`   | `footer` |
-| `division`     | `div`    |
-| `parrafo`      | `p`      |
-| `t1` a `t6`    | `h1`-`h6`|
+| HTES           | HTML5    | Descripción                                  |
+|----------------|----------|-----------------------------------------------|
+| `encabezado`   | `header` | Cabecera de la página o de una sección         |
+| `navegacion`   | `nav`    | Bloque de enlaces de navegación                |
+| `principal`    | `main`   | Contenido principal único de la página         |
+| `seccion`      | `section`| Sección temática con encabezado propio         |
+| `pie-pagina`   | `footer` | Pie de página o de sección                     |
+| `division`     | `div`    | Contenedor genérico de bloque                  |
+| `parrafo`      | `p`      | Párrafo de texto                               |
+| `t1`           | `h1`     | Título de nivel 1                              |
+| `t2`           | `h2`     | Título de nivel 2                              |
+| `t3`           | `h3`     | Título de nivel 3                              |
+| `t4`           | `h4`     | Título de nivel 4                              |
+| `t5`           | `h5`     | Título de nivel 5                              |
+| `t6`           | `h6`     | Título de nivel 6                              |
+
+## Etapa 3 — Atributos básicos (pendiente)
+
+| Atributo HTES | Atributo HTML5 |
+|---------------|----------------|
+| `clase`       | `class`        |
+| `ruta`        | `href`         |
+| `fuente`      | `src`          |
 
 ## Regla constitucional
 

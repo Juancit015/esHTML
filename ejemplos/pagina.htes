@@ -3,13 +3,37 @@
   <meta charset="UTF-8">
   <titulo>Mi primera pagina en HTES</titulo>
   <estilo>
-    body { font-family: sans-serif; background: #111; color: #eee; }
+    body { font-family: sans-serif; background: #111; color: #eee; margin: 0; }
+    encabezado, pie-pagina { padding: 20px; background: #222; }
   </estilo>
 </cabeza>
 <cuerpo>
-  Hola mundo, esto se escribio en HTES.
+
+  <encabezado>
+    <t1>Mi sitio en HTES</t1>
+    <navegacion>
+      <parrafo>Inicio | Acerca de | Contacto</parrafo>
+    </navegacion>
+  </encabezado>
+
+  <principal>
+    <seccion>
+      <t2>Bienvenido</t2>
+      <parrafo>Esto es un parrafo de prueba escrito en HTES.</parrafo>
+      <division>
+        <t3>Una caja dentro de una division</t3>
+        <parrafo>Aqui probamos que las etiquetas se anidan bien.</parrafo>
+      </division>
+    </seccion>
+  </principal>
+
+  <pie-pagina>
+    <parrafo>Hecho con HTES, Etapa 2.</parrafo>
+  </pie-pagina>
+
   <guion>
-    console.log("HTES funcionando");
+    console.log("HTES funcionando, Etapa 2");
   </guion>
 </cuerpo>
 </hipertexto>
+
