@@ -11,7 +11,7 @@
 <cuerpo>
 
   <encabezado>
-    <t1>Mi sitio en HTES</t1>
+    <titulo1>Mi sitio en HTES</titulo1>
     <navegacion>
       <lista>
         <elemento><enlace ruta="#inicio">Inicio</enlace></elemento>
@@ -23,33 +23,33 @@
 
   <principal>
     <seccion>
-      <t2>Bienvenido</t2>
+      <subtitulo2>Bienvenido</subtitulo2>
       <parrafo>Esto es un parrafo de prueba escrito en HTES.</parrafo>
-      <division>
-        <t3>Una caja dentro de una division</t3>
+      <contenedor>
+        <subtitulo3>Una caja dentro de un contenedor</subtitulo3>
         <parrafo>Aqui probamos que las etiquetas se anidan bien.</parrafo>
-      </division>
+      </contenedor>
 
-      <division clase="tarjeta">
-        <t3>Probando atributos</t3>
+      <contenedor clase="tarjeta">
+        <subtitulo3>Probando atributos</subtitulo3>
         <parrafo>
           Visita <enlace ruta="https://es.wikipedia.org">Wikipedia en espanol</enlace>
           para aprender mas.
         </parrafo>
         <imagen fuente="https://via.placeholder.com/300x150" alt="Imagen de prueba">
-      </division>
+      </contenedor>
 
-      <division>
-        <t3>Probando listas y tramo</t3>
+      <contenedor>
+        <subtitulo3>Probando listas y fragmento</subtitulo3>
         <parrafo>
-          Esta palabra esta <tramo clase="resaltado">resaltada</tramo> con un tramo.
+          Esta palabra esta <fragmento clase="resaltado">resaltada</fragmento> con un fragmento.
         </parrafo>
         <lista-ord>
           <elemento>Primero escribimos el diccionario</elemento>
           <elemento>Luego el transpilador minimo</elemento>
           <elemento>Despues probamos con archivos reales</elemento>
         </lista-ord>
-      </division>
+      </contenedor>
     </seccion>
   </principal>
 

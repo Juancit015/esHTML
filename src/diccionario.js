@@ -24,14 +24,14 @@ const ETIQUETAS = {
   principal: "main",
   seccion: "section",
   "pie-pagina": "footer",
-  division: "div",
+  contenedor: "div",
   parrafo: "p",
-  t1: "h1",
-  t2: "h2",
-  t3: "h3",
-  t4: "h4",
-  t5: "h5",
-  t6: "h6",
+  titulo1: "h1",
+  subtitulo2: "h2",
+  subtitulo3: "h3",
+  subtitulo4: "h4",
+  subtitulo5: "h5",
+  subtitulo6: "h6",
 
   // --- Etapa 3: las etiquetas que más usan atributos ---
   enlace: "a",
@@ -41,7 +41,7 @@ const ETIQUETAS = {
   lista: "ul",
   "lista-ord": "ol",
   elemento: "li",
-  tramo: "span",
+  fragmento: "span",
 };
 
 module.exports = { ETIQUETAS };

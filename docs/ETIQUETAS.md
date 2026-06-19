@@ -26,14 +26,14 @@ Las etiquetas que existen en todo documento HTML, sin atributos todavía.
 | `principal`    | `main`   | Contenido principal único de la página         |
 | `seccion`      | `section`| Sección temática con encabezado propio         |
 | `pie-pagina`   | `footer` | Pie de página o de sección                     |
-| `division`     | `div`    | Contenedor genérico de bloque                  |
+| `contenedor`   | `div`    | Contenedor genérico de bloque                  |
 | `parrafo`      | `p`      | Párrafo de texto                               |
-| `t1`           | `h1`     | Título de nivel 1                              |
-| `t2`           | `h2`     | Título de nivel 2                              |
-| `t3`           | `h3`     | Título de nivel 3                              |
-| `t4`           | `h4`     | Título de nivel 4                              |
-| `t5`           | `h5`     | Título de nivel 5                              |
-| `t6`           | `h6`     | Título de nivel 6                              |
+| `titulo1`      | `h1`     | Título de nivel 1                              |
+| `subtitulo2`   | `h2`     | Título de nivel 2                              |
+| `subtitulo3`   | `h3`     | Título de nivel 3                              |
+| `subtitulo4`   | `h4`     | Título de nivel 4                              |
+| `subtitulo5`   | `h5`     | Título de nivel 5                              |
+| `subtitulo6`   | `h6`     | Título de nivel 6                              |
 
 ## Etapa 3 — Atributos básicos ✅
 
@@ -59,7 +59,7 @@ Etiquetas nuevas de esta etapa (las que más usan estos atributos):
 | `lista`       | `ul`   | Lista desordenada con viñetas               |
 | `lista-ord`   | `ol`   | Lista ordenada, numerada                    |
 | `elemento`    | `li`   | Elemento dentro de una lista                |
-| `tramo`       | `span` | Contenedor genérico en línea sin semántica  |
+| `fragmento`   | `span` | Contenedor genérico en línea sin semántica  |
 
 ## Etapa 5 — Formularios (pendiente)
 
@@ -77,6 +77,16 @@ Etiquetas nuevas de esta etapa (las que más usan estos atributos):
 
 Ningún nombre de etiqueta lleva tilde. Ver el README principal para más
 contexto sobre esta decisión.
+
+## Nota sobre nombres revisados
+
+Los nombres `t1`-`t6`, `division` y `tramo` de las primeras etapas se
+renombraron a `titulo1`/`subtitulo2`-`subtitulo6`, `contenedor` y
+`fragmento` por ser más descriptivos. `titulo` (para `<title>`) y
+`titulo1` (para `<h1>`) son nombres distintos y no entran en conflicto:
+el transpilador solo reconoce `titulo` cuando justo después viene un
+espacio o un `>`, así que nunca confunde uno con el otro dentro de
+`titulo1`.
 
 ## ¿Por qué este orden?
 
