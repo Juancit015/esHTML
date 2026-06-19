@@ -32,6 +32,31 @@ const ETIQUETAS = {
   t4: "h4",
   t5: "h5",
   t6: "h6",
+
+  // --- Etapa 3: las etiquetas que más usan atributos ---
+  enlace: "a",
+  imagen: "img",
 };
 
 module.exports = { ETIQUETAS };
+
+// ============================================================
+// Etapa 3: atributos básicos
+// ============================================================
+// A diferencia de las etiquetas, los atributos viven DENTRO de
+// los símbolos < >. Ejemplo:
+//
+//   <enlace ruta="https://google.com">
+//            ^^^^ esto es un atributo, no una etiqueta
+//
+// Mismo principio: nombres en español, sin tildes.
+
+const ATRIBUTOS = {
+  clase: "class",
+  ruta: "href",
+  fuente: "src",
+  alt: "alt",
+  id: "id",
+};
+
+module.exports.ATRIBUTOS = ATRIBUTOS;

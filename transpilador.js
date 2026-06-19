@@ -14,17 +14,25 @@
 
 const fs = require("fs");
 const path = require("path");
-const { ETIQUETAS } = require("./src/diccionario");
+const { ETIQUETAS, ATRIBUTOS } = require("./src/diccionario");
 
 function transpilar(codigoHtes) {
   let resultado = codigoHtes;
 
+  // Paso 1: traducir atributos (clase=, ruta=, fuente=...)
+  // Importante: esto va ANTES de traducir etiquetas, porque buscamos
+  // el atributo seguido de "=", sin importar en qué etiqueta esté.
+  for (const [es, en] of Object.entries(ATRIBUTOS)) {
+    if (es === en) continue; // no hace falta tocar id="..." si ya es igual
+    const patronAtributo = new RegExp(`\\b${es}=`, "g");
+    resultado = resultado.replace(patronAtributo, `${en}=`);
+  }
+
+  // Paso 2: traducir etiquetas (igual que en la Etapa 1 y 2)
   for (const [es, en] of Object.entries(ETIQUETAS)) {
-    // Etiqueta de apertura: <nombre   (puede seguir un espacio o un cierre >)
     const apertura = new RegExp(`<${es}(?=[\\s>])`, "g");
     resultado = resultado.replace(apertura, `<${en}`);
 
-    // Etiqueta de cierre: </nombre>
     const cierre = new RegExp(`</${es}>`, "g");
     resultado = resultado.replace(cierre, `</${en}>`);
   }

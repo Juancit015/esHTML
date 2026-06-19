@@ -24,6 +24,15 @@
         <t3>Una caja dentro de una division</t3>
         <parrafo>Aqui probamos que las etiquetas se anidan bien.</parrafo>
       </division>
+
+      <division clase="tarjeta">
+        <t3>Probando atributos</t3>
+        <parrafo>
+          Visita <enlace ruta="https://es.wikipedia.org">Wikipedia en espanol</enlace>
+          para aprender mas.
+        </parrafo>
+        <imagen fuente="https://via.placeholder.com/300x150" alt="Imagen de prueba">
+      </division>
     </seccion>
   </principal>
 

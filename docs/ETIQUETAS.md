@@ -35,13 +35,31 @@ Las etiquetas que existen en todo documento HTML, sin atributos todavía.
 | `t5`           | `h5`     | Título de nivel 5                              |
 | `t6`           | `h6`     | Título de nivel 6                              |
 
-## Etapa 3 — Atributos básicos (pendiente)
+## Etapa 3 — Atributos básicos ✅
 
-| Atributo HTES | Atributo HTML5 |
-|---------------|----------------|
-| `clase`       | `class`        |
-| `ruta`        | `href`         |
-| `fuente`      | `src`          |
+| Atributo HTES | Atributo HTML5 | Descripción                          |
+|---------------|----------------|----------------------------------------|
+| `clase`       | `class`        | Clase CSS para dar estilo al elemento  |
+| `ruta`        | `href`         | Destino de un enlace                   |
+| `fuente`      | `src`          | Origen de una imagen, audio, video...  |
+| `alt`         | `alt`          | Texto alternativo de una imagen        |
+| `id`          | `id`           | Identificador único del elemento       |
+
+Etiquetas nuevas de esta etapa (las que más usan estos atributos):
+
+| HTES      | HTML5 | Descripción           |
+|-----------|-------|------------------------|
+| `enlace`  | `a`   | Hipervínculo            |
+| `imagen`  | `img` | Imagen incrustada       |
+
+## Etapa 4 — Listas y más elementos en línea (pendiente)
+
+| HTES          | HTML5  |
+|---------------|--------|
+| `lista`       | `ul`   |
+| `lista-ord`   | `ol`   |
+| `elemento`    | `li`   |
+| `tramo`       | `span` |
 
 ## Regla constitucional
 

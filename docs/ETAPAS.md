@@ -22,11 +22,20 @@ bloque de `<estilo>`/CSS. Por ahora no causa problemas porque nuestras
 etiquetas no coinciden con nombres comunes de clases CSS, pero es algo a
 resolver antes de la Etapa 5.
 
-## ⬜ Etapa 3 — Atributos básicos
-El salto técnico importante. El transpilador deja de ser "buscar y
-remplazar" puro y empieza a entender pares `nombre=valor` dentro de una
-etiqueta: `clase=`, `id=`, `ruta=` (href), `fuente=` (src), `alt=`.
-**Meta:** enlaces e imágenes que funcionen de verdad.
+## ✅ Etapa 3 — Atributos básicos
+El salto técnico importante. El transpilador dejó de ser "buscar y
+remplazar" puro de etiquetas y ahora también entiende pares
+`nombre=valor` dentro de una etiqueta: `clase=`, `ruta=` (href),
+`fuente=` (src), `alt=`.
+**Meta lograda:** enlaces (`<enlace ruta="...">`) e imágenes
+(`<imagen fuente="..." alt="...">`) que funcionan de verdad.
+
+**Cómo funciona en el código:** el transpilador ahora corre dos pasadas.
+Primero traduce los atributos (busca `clase=` en cualquier parte y lo
+cambia a `class=`), y *después* traduce las etiquetas. El orden importa:
+si tradujéramos las etiquetas primero, `ruta=` dentro de `<enlace>` ya
+estaría dentro de una etiqueta `<a>`, pero el atributo seguiría sin
+traducir si no hacemos ambos pasos.
 
 ## ⬜ Etapa 4 — Listas, enlaces e imágenes
 6 etiquetas: `enlace`, `imagen`, `lista`, `lista-ord`, `elemento`, `tramo`.
