@@ -1,0 +1,43 @@
+# Plan de etapas
+
+Este proyecto se construye por etapas pequeñas. Cada etapa termina con algo
+que de verdad puedes correr y ver funcionando en el navegador — nunca código
+a medias.
+
+## ✅ Etapa 1 — El esqueleto
+7 etiquetas: `hipertexto`, `cabeza`, `titulo`, `cuerpo`, `meta`, `estilo`, `guion`.
+Sin atributos. Reemplazo simple de texto.
+**Meta lograda:** transpilar una página mínima válida.
+
+## ⬜ Etapa 2 — Estructura visual
+8 etiquetas: `encabezado`, `navegacion`, `principal`, `seccion`, `pie-pagina`,
+`division`, `parrafo`, `t1`-`t6`.
+**Meta:** una página con secciones visibles y texto real.
+
+## ⬜ Etapa 3 — Atributos básicos
+El salto técnico importante. El transpilador deja de ser "buscar y
+remplazar" puro y empieza a entender pares `nombre=valor` dentro de una
+etiqueta: `clase=`, `id=`, `ruta=` (href), `fuente=` (src), `alt=`.
+**Meta:** enlaces e imágenes que funcionen de verdad.
+
+## ⬜ Etapa 4 — Listas, enlaces e imágenes
+6 etiquetas: `enlace`, `imagen`, `lista`, `lista-ord`, `elemento`, `tramo`.
+Usa los atributos de la Etapa 3 en la práctica.
+**Meta:** un blog o portafolio simple, completo y navegable.
+
+## ⬜ Etapa 5 — Formularios
+8 etiquetas: `formulario`, `entrada`, `boton`, `etiqueta`, `seleccionar`,
+`opcion`, `area-texto`, `tabla`.
+La parte más compleja: muchos atributos por etiqueta.
+**Meta:** un formulario de contacto funcional.
+
+## ⬜ Etapa 6 — Documentación y publicación
+README completo, spec pública de cada etiqueta, repositorio listo para
+que otros desarrolladores contribuyan.
+
+---
+
+¿Por qué este orden y no otro? Cada etapa solo introduce **un** concepto
+nuevo de complejidad a la vez: primero etiquetas sin atributos, después
+estructura, después atributos, después casos de uso reales. Así nunca te
+enfrentas a dos problemas nuevos al mismo tiempo.

@@ -1,0 +1,15 @@
+<hipertexto>
+<cabeza>
+  <meta charset="UTF-8">
+  <titulo>Mi primera pagina en HTES</titulo>
+  <estilo>
+    body { font-family: sans-serif; background: #111; color: #eee; }
+  </estilo>
+</cabeza>
+<cuerpo>
+  Hola mundo, esto se escribio en HTES.
+  <guion>
+    console.log("HTES funcionando");
+  </guion>
+</cuerpo>
+</hipertexto>
