@@ -12,11 +12,11 @@ const ETIQUETAS = {
   // --- Etapa 1: el esqueleto ---
   hipertexto: "html",
   cabeza: "head",
-  titulo: "title",
+  titular: "title",
   cuerpo: "body",
   meta: "meta",
   estilo: "style",
-  guion: "script",
+  comportamiento: "script",
 
   // --- Etapa 2: estructura visual ---
   encabezado: "header",

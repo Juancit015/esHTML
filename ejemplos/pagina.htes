@@ -1,7 +1,7 @@
 <hipertexto>
 <cabeza>
   <meta charset="UTF-8">
-  <titulo>Mi primera pagina en HTES</titulo>
+  <titular>Mi primera pagina en HTES</titular>
   <estilo>
     body { font-family: sans-serif; background: #111; color: #eee; margin: 0; }
     encabezado, pie-pagina { padding: 20px; background: #222; }
@@ -83,9 +83,9 @@
     <parrafo>Hecho con HTES, Etapa 2.</parrafo>
   </pie-pagina>
 
-  <guion>
+  <comportamiento>
     console.log("HTES funcionando, Etapa 2");
-  </guion>
+  </comportamiento>
 </cuerpo>
 </hipertexto>
 

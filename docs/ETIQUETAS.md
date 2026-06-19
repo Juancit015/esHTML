@@ -11,11 +11,11 @@ Las etiquetas que existen en todo documento HTML, sin atributos todavía.
 |--------------|----------|-------------------------------------------|
 | `hipertexto` | `html`   | Elemento raíz del documento                |
 | `cabeza`     | `head`   | Contiene metadatos del documento           |
-| `titulo`     | `title`  | Título en la pestaña del navegador         |
+| `titular`    | `title`  | Título en la pestaña del navegador         |
 | `cuerpo`     | `body`   | Contenido visible de la página             |
 | `meta`       | `meta`   | Metadatos: charset, viewport, descripción  |
 | `estilo`     | `style`  | Estilos CSS incrustados                    |
-| `guion`      | `script` | Código JavaScript incrustado o enlazado    |
+| `comportamiento` | `script` | Código JavaScript incrustado o enlazado |
 
 ## Etapa 2 — Estructura visual ✅
 
@@ -105,11 +105,11 @@ contexto sobre esta decisión.
 
 Los nombres `t1`-`t6`, `division` y `tramo` de las primeras etapas se
 renombraron a `titulo1`/`subtitulo2`-`subtitulo6`, `contenedor` y
-`fragmento` por ser más descriptivos. `titulo` (para `<title>`) y
-`titulo1` (para `<h1>`) son nombres distintos y no entran en conflicto:
-el transpilador solo reconoce `titulo` cuando justo después viene un
-espacio o un `>`, así que nunca confunde uno con el otro dentro de
-`titulo1`.
+`fragmento` por ser más descriptivos. `titulo` se renombró a `titular`
+(para `<title>`), y `guion` se renombró a `comportamiento` (para
+`<script>`) para describir mejor su función sin entrar en conflicto con
+`codigo` (futura etiqueta para `<code>`). `titular` (para `<title>`) y
+`titulo1` (para `<h1>`) son nombres distintos y no entran en conflicto.
 
 ## ¿Por qué este orden?
 
