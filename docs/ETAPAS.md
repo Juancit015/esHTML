@@ -5,14 +5,14 @@ que de verdad puedes correr y ver funcionando en el navegador — nunca código
 a medias.
 
 ## ✅ Etapa 1 — El esqueleto
-7 etiquetas: `hipertexto`, `cabeza`, `titulo`, `cuerpo`, `meta`, `estilo`, `guion`.
+7 etiquetas: `hipertexto`, `cabeza`, `titular`, `cuerpo`, `meta`, `estilo`, `comportamiento`.
 Sin atributos. Reemplazo simple de texto.
 **Meta lograda:** transpilar una página mínima válida.
 
 ## ✅ Etapa 2 — Estructura visual
 8 etiquetas: `encabezado`, `navegacion`, `principal`, `seccion`, `pie-pagina`,
-`division`, `parrafo`, `t1`-`t6` (en realidad 13 etiquetas contando cada
-nivel de título por separado).
+`contenedor`, `parrafo`, `titulo1`/`subtitulo2`-`subtitulo6` (en realidad 13
+etiquetas contando cada nivel de título por separado).
 **Meta lograda:** una página con secciones visibles, texto real y anidación
 de etiquetas funcionando correctamente.
 
@@ -38,10 +38,10 @@ estaría dentro de una etiqueta `<a>`, pero el atributo seguiría sin
 traducir si no hacemos ambos pasos.
 
 ## ✅ Etapa 4 — Listas y elementos en línea
-4 etiquetas: `lista`, `lista-ord`, `elemento`, `tramo`. No introduce
+4 etiquetas: `lista`, `lista-ord`, `elemento`, `fragmento`. No introduce
 conceptos nuevos de motor — solo demuestra que el diccionario crece sin
 tocar el transpilador. Probamos anidación de tres niveles
-(`lista > elemento > enlace`) y `tramo` con atributo `clase` combinando
+(`lista > elemento > enlace`) y `fragmento` con atributo `clase` combinando
 todo lo aprendido en la Etapa 3.
 **Meta lograda:** una navegación con enlaces reales en lista, texto
 resaltado en línea, y una lista ordenada.
@@ -62,7 +62,25 @@ separado, `ATRIBUTOS_BOOLEANOS`, y un tercer paso en el transpilador
 para cubrir ese caso. Buen recordatorio de por qué probamos cada etapa
 antes de hacer commit.
 
-## ⬜ Etapa 6 — Documentación y publicación
+## ✅ Etapa 6 — Atributos globales y específicos
+17 atributos nuevos: 3 globales (`titulo-emergente`, `idioma`,
+`estilo-en-linea`, que funcionan en *cualquier* etiqueta) y 14
+específicos repartidos entre `enlace` (`objetivo`, `descargar`),
+`imagen` (`ancho`, `alto`), `entrada`/`area-texto` (`maximo`, `minimo`,
+`patron`, `filas`, `columnas`), `meta` (`n-meta`, `contenido`) y
+`formulario` (`accion`, `metodo`).
+**Meta lograda:** las 33 etiquetas existentes ya no tienen huecos —
+`<meta>` ahora describe la página de verdad, los formularios saben a
+dónde enviar sus datos, y los enlaces pueden abrir en pestaña nueva.
+
+🐛 **Detalle encontrado en esta etapa:** al revisar manualmente, faltaba
+`titulo-emergente` (title) en `enlace` — un atributo *global* que
+aplica a cualquier etiqueta, no solo a una específica. Quedó como
+recordatorio de revisar primero los atributos globales antes de los
+específicos, porque uno global multiplica su utilidad en todas las
+etiquetas de golpe.
+
+## ⬜ Etapa 7 — Documentación y publicación
 README completo, spec pública de cada etiqueta, repositorio listo para
 que otros desarrolladores contribuyan.
 

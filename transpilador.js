@@ -1,5 +1,5 @@
 // transpilador.js
-// Motor de HTES (Etapa 1)
+// Motor de HTES
 //
 // Qué hace este archivo:
 //   1. Lee un archivo .htes que le pasas por la terminal
@@ -11,6 +11,15 @@
 //   node transpilador.js ejemplos/pagina.htes
 //
 // Esto generará: ejemplos/pagina.html
+//
+// MODO WATCH — para no tener que correr el comando a mano cada vez:
+//   node transpilador.js ejemplos/pagina.htes --watch
+//
+// Con --watch, el programa no termina: se queda corriendo en la terminal,
+// vigilando el archivo .htes. Cada vez que lo guardas (Ctrl+S), regenera
+// el .html automáticamente. Combínalo con la extensión Live Server de
+// VS Code apuntando al .html para que el navegador se refresque solo.
+// Para detenerlo, presiona Ctrl+C en la terminal.
 
 const fs = require("fs");
 const path = require("path");
@@ -47,17 +56,10 @@ function transpilar(codigoHtes) {
   return resultado;
 }
 
-function main() {
-  const rutaEntrada = process.argv[2];
-
-  if (!rutaEntrada) {
-    console.error("Uso: node transpilador.js <archivo.htes>");
-    process.exit(1);
-  }
-
+function compilarArchivo(rutaEntrada) {
   if (!fs.existsSync(rutaEntrada)) {
     console.error(`No encontré el archivo: ${rutaEntrada}`);
-    process.exit(1);
+    return false;
   }
 
   const codigoHtes = fs.readFileSync(rutaEntrada, "utf-8");
@@ -66,7 +68,41 @@ function main() {
   const rutaSalida = rutaEntrada.replace(/\.htes$/, ".html");
   fs.writeFileSync(rutaSalida, codigoHtml, "utf-8");
 
-  console.log(`Listo. Generé: ${rutaSalida}`);
+  const hora = new Date().toLocaleTimeString("es");
+  console.log(`[${hora}] Listo. Generé: ${rutaSalida}`);
+  return true;
+}
+
+function main() {
+  const argumentos = process.argv.slice(2);
+  const modoWatch = argumentos.includes("--watch");
+  const rutaEntrada = argumentos.find((a) => a !== "--watch");
+
+  if (!rutaEntrada) {
+    console.error("Uso: node transpilador.js <archivo.htes> [--watch]");
+    process.exit(1);
+  }
+
+  if (!fs.existsSync(rutaEntrada)) {
+    console.error(`No encontré el archivo: ${rutaEntrada}`);
+    process.exit(1);
+  }
+
+  // Primera compilación siempre, watch o no.
+  compilarArchivo(rutaEntrada);
+
+  if (!modoWatch) {
+    return; // comportamiento de siempre: compila una vez y termina
+  }
+
+  // --- Modo watch: queda corriendo, vigilando el archivo ---
+  console.log(`\nVigilando ${rutaEntrada}... (Ctrl+C para detener)\n`);
+
+  fs.watch(rutaEntrada, (evento) => {
+    if (evento === "change") {
+      compilarArchivo(rutaEntrada);
+    }
+  });
 }
 
 main();

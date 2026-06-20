@@ -1,6 +1,7 @@
-<html>
+<html idioma="es">
 <head>
   <meta charset="UTF-8">
+  <meta n-meta="description" contenido="Pagina de ejemplo construida con HTES">
   <title>Mi primera pagina en HTES</title>
   <style>
     body { font-family: sans-serif; background: #111; color: #eee; margin: 0; }
@@ -37,10 +38,10 @@
       <div class="tarjeta">
         <h3>Probando atributos</h3>
         <p>
-          Visita <a href="https://es.wikipedia.org">Wikipedia en espanol</a>
+          Visita <a href="https://es.wikipedia.org" objetivo="_blank" titulo-emergente="Abre en pestana nueva">Wikipedia en espanol</a>
           para aprender mas.
         </p>
-        <img src="https://via.placeholder.com/300x150" alt="Imagen de prueba">
+        <img src="https://via.placeholder.com/300x150" alt="Imagen de prueba" ancho="300" alto="150">
       </div>
 
       <div>
@@ -56,9 +57,9 @@
       </div>
       <div>
         <h3>Probando formularios</h3>
-        <form>
+        <form accion="/enviar" metodo="post">
           <label for="nombre-completo">Nombre</label>
-          <input type="text" id="nombre-completo" name="nombre" placeholder="Tu nombre" required>
+          <input type="text" id="nombre-completo" name="nombre" placeholder="Tu nombre" minimo="2" maximo="40" required>
 
           <label for="correo-usuario">Correo</label>
           <input type="email" id="correo-usuario" name="correo" placeholder="tu@correo.com" required>
@@ -71,7 +72,7 @@
           </select>
 
           <label for="mensaje-usuario">Mensaje</label>
-          <textarea id="mensaje-usuario" name="mensaje" placeholder="Escribe tu mensaje"></textarea>
+          <textarea id="mensaje-usuario" name="mensaje" placeholder="Escribe tu mensaje" filas="4" columnas="40"></textarea>
 
           <button type="submit">Enviar</button>
         </form>

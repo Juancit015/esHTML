@@ -91,10 +91,60 @@ Atributos booleanos (sin `=valor`, solo la palabra sola):
 | `seleccionado`  | `checked`      | Checkbox/radio marcado por defecto |
 | `deshabilitado` | `disabled`     | El campo no se puede editar        |
 
-## Etapa 6 — Documentación y publicación (pendiente)
+## Etapa 6 — Atributos globales y específicos ✅
 
-Sin etiquetas nuevas. Esta etapa es: README completo, spec pública, y
-preparar el repositorio para que otros desarrolladores puedan contribuir.
+Para que las 33 etiquetas existentes funcionen completas, sin huecos,
+como sus equivalentes reales en HTML5.
+
+Atributos globales (funcionan en *cualquier* etiqueta, no solo en una):
+
+| Atributo HTES        | Atributo HTML5 | Descripción                              |
+|-----------------------|----------------|---------------------------------------------|
+| `titulo-emergente`   | `title`        | Texto que aparece al pasar el mouse encima |
+| `idioma`             | `lang`         | Idioma del elemento o del documento        |
+| `estilo-en-linea`    | `style`        | CSS aplicado directamente al elemento      |
+
+Atributos específicos de `enlace`:
+
+| Atributo HTES | Atributo HTML5 | Descripción                              |
+|---------------|----------------|---------------------------------------------|
+| `objetivo`    | `target`       | Dónde abrir el enlace (ej: `_blank`)       |
+| `descargar`   | `download`     | Fuerza la descarga del archivo enlazado    |
+
+Atributos específicos de `imagen`:
+
+| Atributo HTES | Atributo HTML5 | Descripción          |
+|---------------|----------------|------------------------|
+| `ancho`       | `width`        | Ancho de la imagen     |
+| `alto`        | `height`       | Alto de la imagen      |
+
+Atributos específicos de `entrada` y `area-texto`:
+
+| Atributo HTES | Atributo HTML5 | Descripción                                |
+|---------------|----------------|-----------------------------------------------|
+| `maximo`      | `max`          | Valor máximo permitido                       |
+| `minimo`      | `min`          | Valor mínimo permitido                       |
+| `patron`      | `pattern`      | Expresión regular de validación              |
+| `filas`       | `rows`         | Alto del área de texto, en filas             |
+| `columnas`    | `cols`         | Ancho del área de texto, en columnas         |
+
+Atributos específicos de `meta`:
+
+| Atributo HTES | Atributo HTML5 | Descripción                                      |
+|---------------|----------------|------------------------------------------------------|
+| `n-meta`      | `name`         | Qué tipo de metadato es (ej: `description`)        |
+| `contenido`   | `content`      | El valor de ese metadato                            |
+
+Atributos específicos de `formulario`:
+
+| Atributo HTES | Atributo HTML5 | Descripción                          |
+|---------------|----------------|------------------------------------------|
+| `accion`      | `action`       | A dónde se envían los datos del formulario|
+| `metodo`      | `method`       | Cómo se envían: `get` o `post`            |
+
+Con estos 17 atributos nuevos (3 globales + 14 específicos), el total
+sube a **29 atributos** (26 con valor + 3 booleanos), cubriendo por
+completo las 33 etiquetas actuales.
 
 ## Regla constitucional
 

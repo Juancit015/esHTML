@@ -22,7 +22,9 @@ se convierte en:
 
 ## Estado del proyecto
 
-🚧 En desarrollo activo — Etapa 1 completada.
+🚧 En desarrollo activo — Etapas 1 a 5 completadas (33 etiquetas, atributos
+con valor y booleanos). Extensión de VS Code disponible en
+[esHTML-vscode](https://github.com/Juancit015/esHTML-vscode).
 
 Ver el progreso por etapas en [`docs/ETAPAS.md`](docs/ETAPAS.md).
 
@@ -46,6 +48,27 @@ Ver el progreso por etapas en [`docs/ETAPAS.md`](docs/ETAPAS.md).
    ```
 
 4. Esto genera un archivo `.html` junto al original, listo para abrir en cualquier navegador.
+
+## Editar en vivo (modo watch + Live Server)
+
+Si no quieres correr el comando a mano cada vez que editas, usa la bandera `--watch`:
+
+```bash
+node transpilador.js ejemplos/pagina.htes --watch
+```
+
+El programa queda corriendo en la terminal y regenera el `.html`
+automáticamente cada vez que guardas el archivo `.htes` (Ctrl+S). Para
+detenerlo, presiona `Ctrl+C`.
+
+Combínalo con la extensión **Live Server** de VS Code (clic derecho sobre
+el `.html` generado → "Open with Live Server") y el navegador se
+refrescará solo cada vez que el `.htes` cambie. El flujo completo queda:
+editas → guardas → se regenera el `.html` → el navegador se refresca,
+sin tocar la terminal de nuevo.
+
+Nota: Live Server no entiende `.htes` directamente — siempre apunta al
+`.html` que el transpilador ya generó.
 
 ## Estructura del proyecto
 
